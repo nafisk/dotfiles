@@ -67,17 +67,13 @@ These dotfiles are a collection of my personal configurations for various tools 
 - **iTerm2**: Advanced terminal emulator for macOS with support for split panes, tmux integration, and more.
 - **Eza**: Modern replacement for `ls` with more features.
 
-### Text Editor
+### Code Editor
 
 - **Neovim**: Enhanced version of Vim, optimized for extensibility and performance.
 
 ### Multiplexer
 
 - **Tmux**: Terminal multiplexer for managing multiple terminal sessions.
-
-### Code Editor
-
-- **Alacritty**: Blazing fast rust based minimal code editor.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
