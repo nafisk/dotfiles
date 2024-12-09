@@ -1,3 +1,8 @@
+# Path Variables
+export TERM='xterm-256color'
+export EDITOR='nvim'
+export VISUAL='nvim'
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -35,17 +40,6 @@ source $ZSH/oh-my-zsh.sh
 # JAVA
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
-# history setup
-HISTFILE=$HOME/.zhistory
-SAVEHIST=1000
-HISTSIZE=999
-setopt share_history
-setopt hist_expire_dups_first
-setopt hist_ignore_dups
-setopt hist_verify
-
-# Alacritty Terminal Binds - Enable natural text editing
-#
 # Move to the beginning of the line. `Cmd + Left Arrow`:
 bindkey "^[[1;9D" beginning-of-line
 # Move to the end of the line. `Cmd + Right Arrow`:
@@ -60,9 +54,10 @@ bindkey "^[[3;10~" backward-kill-word
 bindkey "^[[3;3~" kill-word
 
 # ---- Eza (better ls) -----
-alias ls="eza --icons=always --no-permissions"
+alias ls="eza --icons=always" 
 
-
+# FZF
+alias fzf="fzf --preview='bat --color=always {}'"
 
 ### 🔴 MAIN ALIASES 🔴 ###
 
@@ -82,7 +77,7 @@ alias gac='git add . && git commit -m'
 
 # cli aliases
 alias cl='clear'
-alias cdp='cd ~/Desktop/Projects/'
+alias cdp='cd ~/Developer/'
 alias jn='jupyter notebook'
 alias jl='jupyterlab'
 
@@ -94,18 +89,20 @@ alias xps='ssh nafisk@192.168.1.181'
 alias pc='ssh nafisk@192.168.1.226'
 
 # terminal editor alias
-alias nv='nvim'
-alias nvh='bat /Users/nafiskhan/.vim/vim_shortcuts.md'
-alias nvimh='bat /Users/nafiskhan/.vim/vim_shortcuts.md'
+alias n='nvim'
+alias plz='sudo'
+alias please='sudo'
+alias .='open .'
+
+# tmux 
+# alias tmux="TERM=screen-256color-bce tmux"
+alias tmux="TERM=screen-256color-bce tmux"
 alias tm='tmux'
-alias tmh='bat /Users/nafiskhan/.tmux/tmux_shortcuts.md'
+alias tmks='tmux kill server'
+alias x='exit'
 
 # video downlaoder
 alias yt='yt-dlp'
 alias gl='gallery-dl'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
-
-# use Apple M chip GPU to convert Video Media
-alias convert='ffmpeg -i "$1" -c:v h264_videotoolbox -c:a aac "$2"'
-
 

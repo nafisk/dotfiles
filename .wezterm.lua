@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
-config.font_size = 19
+config.font_size = 18
 
 config.enable_tab_bar = false
 
@@ -15,10 +15,12 @@ config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.9
 config.macos_window_background_blur = 80
 
--- my coolnight colorscheme:
+config.window_close_confirmation = "NeverPrompt"
+
+-- my coolnight colorscheme: ##201F28
 config.colors = {
 	foreground = "#CBE0F0",
-	background = "#011423",
+	background = "#111",
 	cursor_bg = "#47FF9C",
 	cursor_border = "#47FF9C",
 	cursor_fg = "#011423",
